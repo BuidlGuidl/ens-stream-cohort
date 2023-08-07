@@ -72,7 +72,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
-        <h1 className="font-bold text-4xl pb-8 visible md:hidden">🏔 Denver Hacker House Crew</h1>
+        <h1 className="font-bold text-4xl pb-8 visible md:hidden">Jessy's Hacker House</h1>
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
           <p className="font-bold text-left text-4xl leading-6 py-2">🏔 Denver Hacker House Crew</p>
           <p>
