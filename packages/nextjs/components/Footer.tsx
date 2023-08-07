@@ -10,6 +10,21 @@ export const Footer = () => {
           <SwitchTheme className="pointer-events-auto" />
         </div>*/}
       </div>
+      <div className="w-full py-3">
+        <ul className="menu menu-horizontal w-full">
+          <div className="flex justify-center items-center gap-2 text-sm w-full">
+            📝{" "}
+            <a
+              href="https://github.com/BuidlGuidl/streams-to-hacker-house"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              Code/Repo
+            </a>{" "}
+          </div>
+        </ul>
+      </div>
       <div className="w-full">
         <ul className="menu menu-horizontal w-full">
           <div className="flex justify-center items-center gap-2 text-sm w-full">
