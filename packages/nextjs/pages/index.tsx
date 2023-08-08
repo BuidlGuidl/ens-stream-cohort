@@ -59,13 +59,12 @@ const Home: NextPage = () => {
         <title></title>
         <meta
           name="description"
-          content="We're running an experiment to retroactively fund open-source work by providing a monthly stream of ETH to handpicked Ethereum developers. We are rewarding up-and-coming high-impact devs for their ongoing contributions to the ecosystem."
+          content="We're running an experiment to retroactively fund open-source work by providing a monthly stream of ETH to Ethereum developers, handpicked by Waylon Jepsen, Colin Roberts, Alexis Bednarick and Jessy from Jessy's Hacker House. We are rewarding up-and-coming high-impact devs for their ongoing contributions to the ecosystem."
         />
         <meta property="og:title" content={title} />
         <meta
           property="og:description"
-          content="We're running an experiment to retroactively fund open-source work by providing a monthly stream of ETH to Ethereum
-          developers, handpicked by a Jessy's Hacker House committee. 
+          content="We're running an experiment to retroactively fund open-source work by providing a monthly stream of ETH to Ethereum developers, handpicked by Waylon Jepsen, Colin Roberts, Alexis Bednarick and Jessy from Jessy's Hacker House.
           We are rewarding up-and-coming high-impact devs for their ongoing contributions
           to the ecosystem."
         />
@@ -79,7 +78,52 @@ const Home: NextPage = () => {
           <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
           <p>
             We're running an experiment to retroactively fund open-source work by providing a monthly stream of ETH to
-            Ethereum developers, handpicked by Jessy and Jessy's Hacker House.
+            Ethereum developers, handpicked by{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/0xjepsen"
+              rel="noreferrer"
+              className="text-white cursor-pointer"
+            >
+              Waylon Jepsen
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/Autoparallel"
+              rel="noreferrer"
+              className="text-white cursor-pointer"
+            >
+              Colin Roberts
+            </a>
+            ,{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/solidityslayer"
+              rel="noreferrer"
+              className="text-white cursor-pointer"
+            >
+              Alexis Bednarick
+            </a>{" "}
+            and{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/13yearoldvc"
+              rel="noreferrer"
+              className="text-white cursor-pointer"
+            >
+              Jessy
+            </a>{" "}
+            from{" "}
+            <a
+              target="_blank"
+              href="https://twitter.com/wehack247"
+              rel="noreferrer"
+              className="pl-1 text-white cursor-pointer"
+            >
+              Jessy's Hacker House
+            </a>
+            .
           </p>
           <p>We are rewarding up-and-coming high-impact devs for their ongoing contributions to the ecosystem.</p>
           <p>
@@ -88,7 +132,12 @@ const Home: NextPage = () => {
           </p>
           <p>
             funded by{" "}
-            <a target="_blank" href="https://buidlguidl.com" rel="noreferrer">
+            <a
+              target="_blank"
+              href="https://buidlguidl.com"
+              rel="noreferrer"
+              className="pl-1 text-white cursor-pointer"
+            >
               🏰 BuidlGuidl
             </a>
             !
