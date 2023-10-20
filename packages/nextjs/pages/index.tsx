@@ -55,7 +55,7 @@ const Home: NextPage = () => {
   const title = "🏷 ENS Cohort Stream";
 
   const desc =
-    "We are rewarding up-and-coming high-impact devs for their ongoing contributions to the ecosystem. If you are building something interesting in the BuidlGuidl that uses ENS as a generalized data store or otherwise interesting for the ENS space, join this telegram and show it off:";
+    "We are rewarding up-and-coming high-impact devs for their ongoing contributions to the ecosystem. If you are building something interesting in the BuidlGuidl that uses ENS as a generalized data store or is otherwise interesting for the ENS space, join this telegram and show it off:";
 
   const tgLink = "https://t.me/+BoCosaswO-hkZWQx";
 
