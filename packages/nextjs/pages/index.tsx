@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import { BigNumber } from "ethers";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
@@ -72,6 +73,7 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
           <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
+          <Image src="/title.jpeg" alt="Title Image" width={300} height={300} className="mx-4" />
           <p>
             {desc + " "}{" "}
             <a style={{ color: "white" }} href={tgLink}>
@@ -106,8 +108,8 @@ const Home: NextPage = () => {
               isLoadingBuilderEvents={isLoadingBuilderEvents}
             />
           </div>
-          <h2 className="font-bold text-2xl px-8 py-4 border-b-2 bg-accent">📑 Contract Details</h2>
-          <div className="p-0 bg-accent rounded-b-2xl">
+          <h2 className="font-bold text-2xl px-8 py-4 border-b-2 bg-accent opacity-60">📑 Contract Details</h2>
+          <div className="p-0 bg-accent rounded-b-2xl opacity-60">
             <StreamContract amIAStreamedBuilder={amIAStreamedBuilder} />
           </div>
         </div>
