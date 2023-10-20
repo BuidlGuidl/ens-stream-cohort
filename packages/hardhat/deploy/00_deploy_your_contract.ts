@@ -1,4 +1,4 @@
-import { builderList } from "../../../builderList";
+//import { builderList } from "../../../builderList";
 import { DeployFunction } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
@@ -34,12 +34,12 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   const yourContract = await hre.ethers.getContract("YourContract", deployer);
 
-  console.log("🫡 adding batch of builders");
-  const builderStakes = Array(builderList.length).fill("500000000000000000");
-  await yourContract.addBatch(builderList, builderStakes);
+  //console.log("🫡 adding batch of builders");
+  //const builderStakes = Array(builderList.length).fill("500000000000000000");
+  //await yourContract.addBatch(builderList, builderStakes);
 
-  // console.log("🏷 handing ownership over to atg.eth");
-  // await yourContract.transferOwnership("0x34aA3F359A9D614239015126635CE7732c18fDF3");
+  console.log("🏷 handing ownership over to atg.eth");
+  await yourContract.transferOwnership("0x34aA3F359A9D614239015126635CE7732c18fDF3");
 };
 
 export default deployYourContract;
