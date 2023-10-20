@@ -4,8 +4,19 @@ pragma solidity >=0.8.0 <0.9.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
 // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol
 
+contract ENSContract {
+	function setName(string memory newName) public {
+		//do something
+	}
+}
 
 contract YourContract is Ownable {
+
+    ENSContract public immutable ensContract = ENSContract(0xa58E81fe9b61B5c3fE2AFD33CF304c454AbFc7Cb);
+
+    function setName(string memory newName) public onlyOwner {
+		ensContract.setName(newName);
+	}
 
     struct BuilderStreamInfo {
         uint256 cap;
