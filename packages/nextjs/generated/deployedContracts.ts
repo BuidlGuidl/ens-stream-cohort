@@ -5,7 +5,7 @@ const contracts = {
       chainId: "1",
       contracts: {
         YourContract: {
-          address: "0xAc2627fFDAAa8B83dAA07C2b5fbA242C203680Ca",
+          address: "0x2634aF3E799D3E17C6cf30bCF1275A7e3808F0df",
           abi: [
             {
               inputs: [],
@@ -172,6 +172,19 @@ const contracts = {
             },
             {
               inputs: [],
+              name: "ensContract",
+              outputs: [
+                {
+                  internalType: "contract ENSContract",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
               name: "frequency",
               outputs: [
                 {
@@ -199,6 +212,19 @@ const contracts = {
             {
               inputs: [],
               name: "renounceOwnership",
+              outputs: [],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "string",
+                  name: "newName",
+                  type: "string",
+                },
+              ],
+              name: "setName",
               outputs: [],
               stateMutability: "nonpayable",
               type: "function",
