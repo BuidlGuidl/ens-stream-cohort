@@ -2,6 +2,8 @@
  * Site footer
  */
 export const Footer = () => {
+  const codeLink = "https://github.com/BuidlGuidl/starkware-stream-cohort";
+
   return (
     <div className="min-h-0 p-5 mb-11 lg:mb-0 font-grotesk">
       <div>
@@ -14,12 +16,7 @@ export const Footer = () => {
         <ul className="menu menu-horizontal w-full">
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             📝{" "}
-            <a
-              href="https://github.com/BuidlGuidl/ens-stream-cohort"
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-2"
-            >
+            <a href={codeLink} target="_blank" rel="noreferrer" className="underline underline-offset-2">
               Code/Repo
             </a>{" "}
           </div>

@@ -8,20 +8,20 @@ module.exports = {
     themes: [
       {
         scaffoldEth: {
-          primary: "#5284ff",
+          primary: "#0f0f46",
           "primary-content": "#b9c7f0",
-          secondary: "#112238",
+          secondary: "#111d38",
           "secondary-content": "#ffffff",
-          accent: "#4a5064",
+          accent: "#e56c79", // new accent color
           "accent-content": "#d4d9f4",
-          neutral: "#727eff",
+          neutral: "#7289e0",
           "neutral-content": "#ffffff",
           "base-100": "#000000",
           "base-200": "#222222",
           "base-300": "#444444",
           "base-content": "#d4e6ff",
-          info: "#93b0fb",
-          success: "#348ee0",
+          info: "#93BBFB",
+          success: "#34EEB6",
           warning: "#FFCF72",
           error: "#FF8863",
           "--rounded-btn": "9999rem",
