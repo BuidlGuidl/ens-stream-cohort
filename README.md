@@ -1,4 +1,7 @@
-# Hacker Houses Streams
+# BuidlGuidl && ENS cohort stream
+
+![image](https://github.com/BuidlGuidl/ens-stream-cohort/assets/2653167/464df10d-9fb2-4148-ba56-9b6433aaf3c6)
+
 
 This **forkable** project -[Steps to set your own Hacker House](#steps-to-set-your-own-hacker-house)- aims to provide a platform to retroactively fund open-source work by providing a monthly
 UBI to handpicked open-source developers, rewarding them for their ongoing contributions.
