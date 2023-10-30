@@ -10,7 +10,7 @@ module.exports = {
         scaffoldEth: {
           primary: "#ffd700", // A primary gold color
           "primary-content": "#f5e6a3", // Lighter shade of primary for content
-          secondary: "#274457", // Deep blue for secondary elements
+          secondary: "#6B2D2D", // Muted burgundy for secondary elements
           "secondary-content": "#ffffff", // White for content on dark backgrounds
           accent: "#8b4513", // Rich wood brown as an accent
           "accent-content": "#d2a679", // Lighter shade of accent for content
@@ -20,7 +20,7 @@ module.exports = {
           "base-200": "#5d4037", // Darker wood shade
           "base-300": "#795548", // Lighter wood shade
           "base-content": "#d7ccc8", // Light shade for content on base backgrounds
-          info: "#4a90e2", // Info in blue shade
+          info: "#d4af37", // Gold shade for info
           success: "#228b22", // Success in forest green shade
           warning: "#dAA520", // Goldenrod warning color
           error: "#b22222", // Firebrick red error color
