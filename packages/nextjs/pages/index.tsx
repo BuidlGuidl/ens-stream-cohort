@@ -54,7 +54,7 @@ const Home: NextPage = () => {
 
   const title = "👑 Golden Age Cohort Stream";
 
-  const desc_conent1 =
+  const desc_content1 =
     "We're entering the Golden Age of Onchain Payments. With the proliferation of rollups, Account Abstraction, and other recent & upcoming advancements in the Ethereum ecosystem, it's finally becoming viable - and, increasingly, preferable - to conduct payments onchain. ";
 
   const desc_content2 =
@@ -63,25 +63,15 @@ const Home: NextPage = () => {
   const desc_content3 =
     'The aperture is broad: basically, "build cool shit for onchain payments". This could be building Account Abstraction-related infrastructure, bridging tools, peer-to-peer payments products, or even helping merchants accept crypto.';
 
-  const desc = (
-    <>
-      <div className="pb-4">{desc_conent1}</div>
-      <div className="pb-4">{desc_content2}</div>
-      <div className="pb-4">{desc_content3}</div>
-
-      {"Join this telegram to contribute:"}
-    </>
-  );
-
   const tgLink = "https://t.me/+Q6PKVKVA7oBmYmEx";
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={desc_conent1 + desc_content2 + desc_content3} />
+        <meta name="description" content={desc_content1 + desc_content2 + desc_content3} />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={desc_conent1 + desc_content2 + desc_content3} />
+        <meta property="og:description" content={desc_content1 + desc_content2 + desc_content3} />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_VERCEL_URL || ""} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -89,9 +79,15 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
           <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
-          <Image src="/golden.png" alt="Title Image" width={300} height={300} className="mx-4" />
+          <Image src="/goldenknight.png" alt="Title Image" width={300} height={300} className="mx-4" />
           <p>
-            {desc}{" "}
+            <div>
+              <div className="pb-4">{desc_content1}</div>
+              <div className="pb-4">{desc_content2}</div>
+              <div className="pb-4">{desc_content3}</div>
+
+              {"Join this telegram to contribute:"}
+            </div>
             <a style={{ color: "white" }} href={tgLink}>
               {tgLink}
             </a>
