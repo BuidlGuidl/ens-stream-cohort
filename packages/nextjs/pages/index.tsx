@@ -52,20 +52,36 @@ const Home: NextPage = () => {
     (builderData: BuilderData) => builderData.builderAddress === address,
   );
 
-  const title = "🏷 ENS Cohort Stream";
+  const title = "👑 Golden Age Cohort Stream";
 
-  const desc =
-    "We are rewarding up-and-coming high-impact devs for their ongoing contributions to the ecosystem. If you are building something interesting in the BuidlGuidl that uses ENS as a generalized data store or is otherwise interesting for the ENS space, join this telegram and show it off:";
+  const desc_conent1 =
+    "We're entering the Golden Age of Onchain Payments. With the proliferation of rollups, Account Abstraction, and other recent & upcoming advancements in the Ethereum ecosystem, it's finally becoming viable - and, increasingly, preferable - to conduct payments onchain. ";
 
-  const tgLink = "https://t.me/+BoCosaswO-hkZWQx";
+  const desc_content2 =
+    "We are rewarding up-and-coming devs for contributions to the ecosystem that help usher in & advance the Golden Age of Onchain Payments. Devs can submit projects, claim grant streams and showcase their work. ";
+
+  const desc_content3 =
+    'The aperture is broad: basically, "build cool shit for onchain payments". This could be building Account Abstraction-related infrastructure, bridging tools, peer-to-peer payments products, or even helping merchants accept crypto.';
+
+  const desc = (
+    <>
+      <div className="pb-4">{desc_conent1}</div>
+      <div className="pb-4">{desc_content2}</div>
+      <div className="pb-4">{desc_content3}</div>
+
+      {"Join this telegram to contribute:"}
+    </>
+  );
+
+  const tgLink = "https://t.me/+Q6PKVKVA7oBmYmEx";
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={desc} />
+        <meta name="description" content={desc_conent1 + desc_content2 + desc_content3} />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={desc} />
+        <meta property="og:description" content={desc_conent1 + desc_content2 + desc_content3} />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_VERCEL_URL || ""} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -73,9 +89,9 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
           <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
-          <Image src="/title.jpeg" alt="Title Image" width={300} height={300} className="mx-4" />
+          <Image src="/golden.png" alt="Title Image" width={300} height={300} className="mx-4" />
           <p>
-            {desc + " "}{" "}
+            {desc}{" "}
             <a style={{ color: "white" }} href={tgLink}>
               {tgLink}
             </a>
@@ -83,18 +99,6 @@ const Home: NextPage = () => {
           <p>
             Chosen developers can submit their contributions, automatically claim grant streams, and showcase their work
             onchain.
-          </p>
-          <p>
-            funded by{" "}
-            <a
-              target="_blank"
-              href="https://buidlguidl.com"
-              rel="noreferrer"
-              className="pl-1 text-white cursor-pointer"
-            >
-              🏰 BuidlGuidl
-            </a>
-            !
           </p>
         </div>
 

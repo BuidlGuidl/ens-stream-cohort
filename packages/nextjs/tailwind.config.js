@@ -8,22 +8,22 @@ module.exports = {
     themes: [
       {
         scaffoldEth: {
-          primary: "#5284ff",
-          "primary-content": "#b9c7f0",
-          secondary: "#112238",
-          "secondary-content": "#ffffff",
-          accent: "#4a5064",
-          "accent-content": "#d4d9f4",
-          neutral: "#727eff",
-          "neutral-content": "#ffffff",
-          "base-100": "#000000",
-          "base-200": "#222222",
-          "base-300": "#444444",
-          "base-content": "#d4e6ff",
-          info: "#93b0fb",
-          success: "#348ee0",
-          warning: "#FFCF72",
-          error: "#FF8863",
+          primary: "#ffd700", // A primary gold color
+          "primary-content": "#f5e6a3", // Lighter shade of primary for content
+          secondary: "#274457", // Deep blue for secondary elements
+          "secondary-content": "#ffffff", // White for content on dark backgrounds
+          accent: "#8b4513", // Rich wood brown as an accent
+          "accent-content": "#d2a679", // Lighter shade of accent for content
+          neutral: "#c0c0c0", // Silver as a neutral color
+          "neutral-content": "#ffffff", // White for content on neutral backgrounds
+          "base-100": "#3e2723", // Very dark wood color
+          "base-200": "#5d4037", // Darker wood shade
+          "base-300": "#795548", // Lighter wood shade
+          "base-content": "#d7ccc8", // Light shade for content on base backgrounds
+          info: "#4a90e2", // Info in blue shade
+          success: "#228b22", // Success in forest green shade
+          warning: "#dAA520", // Goldenrod warning color
+          error: "#b22222", // Firebrick red error color
           "--rounded-btn": "9999rem",
           ".tooltip": {
             "--tooltip-tail": "6px",
