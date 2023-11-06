@@ -73,7 +73,7 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
           <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
-          <Image src="/starknetbg.png" alt="Title Image" width={300} height={300} className="mx-4" />
+          <Image src="/starknetbg.png" alt="Title Image" width={500} height={500} className="mx-4" />
           <p>
             {desc + " "}{" "}
             <a style={{ color: "white" }} href={tgLink}>
