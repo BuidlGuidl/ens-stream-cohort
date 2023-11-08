@@ -8,25 +8,25 @@ module.exports = {
     themes: [
       {
         scaffoldEth: {
-          primary: "#0f0f46",
-          "primary-content": "#b9c7f0",
-          secondary: "#111d38",
-          "secondary-content": "#ffffff",
-          accent: "#e56c79", // new accent color
-          "accent-content": "#d4d9f4",
-          neutral: "#7289e0",
-          "neutral-content": "#ffffff",
-          "base-100": "#000000",
-          "base-200": "#222222",
-          "base-300": "#444444",
-          "base-content": "#d4e6ff",
-          info: "#93BBFB",
-          success: "#34EEB6",
-          warning: "#FFCF72",
-          error: "#FF8863",
-          "--rounded-btn": "9999rem",
+          primary: "#4a4e69", // A muted blue-gray, like shadowed brick
+          "primary-content": "#e0e1dd", // Soft off-white for a gentle contrast
+          secondary: "#22223b", // A deep blue, akin to the twilight sky
+          "secondary-content": "#ffffff", // Pure white for clear legibility
+          accent: "#9a8c98", // A subdued lavender-gray, like weathered stone
+          "accent-content": "#f2e9e4", // A pale, dusty pink for accent content
+          neutral: "#6b705c", // An earthy gray-green, reflecting mossy stones
+          "neutral-content": "#ffffff", // White to stand out against the neutral
+          "base-100": "#1c1c1e", // Dark slate gray, nearly black for the base
+          "base-200": "#2a2a2d", // Slightly lighter shade of dark gray
+          "base-300": "#38383b", // Even lighter, medium-dark gray
+          "base-content": "#cad2c5", // A muted sage green, offering a soft contrast
+          info: "#a8dadc", // A pale, icy blue for informational elements
+          success: "#a5a58d", // A soft olive, representing success with subtlety
+          warning: "#e9c46a", // A muted gold for warnings, less intense
+          error: "#e76f51", // A softer terracotta red for errors
+          "--rounded-btn": "9999rem", // Fully rounded buttons for a modern look
           ".tooltip": {
-            "--tooltip-tail": "6px",
+            "--tooltip-tail": "6px", // Tail size for tooltips, unobtrusive
           },
         },
       },
