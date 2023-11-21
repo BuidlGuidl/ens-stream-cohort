@@ -48,7 +48,7 @@ export const Contributions = ({ withdrawEvents, isLoadingWithdrawEvents }: Contr
               data-test={`${event.log.address}_${event.log.blockNumber}`}
             >
               <div className="flex flex-row justify-between px-2">
-                <div className="w-1/3">
+                <div className="w-3/6">
                   <div>
                     <Address address={event.args.to} />
                   </div>
@@ -57,7 +57,7 @@ export const Contributions = ({ withdrawEvents, isLoadingWithdrawEvents }: Contr
                     <strong>Ξ {ethers.utils.formatEther(event.args.amount)}</strong>
                   </div>
                 </div>
-                <div className="w-2/3 text-left">{event.args.reason}</div>
+                <div className="w-3/6 text-left text-sm">{event.args.reason}</div>
               </div>
             </div>
           );
