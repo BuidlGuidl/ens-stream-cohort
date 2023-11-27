@@ -74,6 +74,7 @@ const Home: NextPage = () => {
         <meta property="og:description" content={desc_content1 + desc_content2 + desc_content3} />
         <meta property="og:url" content={process.env.NEXT_PUBLIC_VERCEL_URL || ""} />
         <link rel="icon" href="/favicon.ico" />
+        <script defer data-domain="goldenage.buidlguidl.com" src="https://plausible.io/js/script.js"></script>
       </Head>
 
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
