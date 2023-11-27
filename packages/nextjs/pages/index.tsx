@@ -79,9 +79,17 @@ const Home: NextPage = () => {
 
       <div className="flex items-center flex-col flex-grow pt-10 mb-20 mx-auto font-grotesk gap-5">
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
-          <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
-          <Image src="/goldenknight.png" alt="Title Image" width={300} height={300} className="mx-4" />
-          <p>
+          <div className="font-bold text-left text-4xl leading-6 py-2">
+            {title}
+            <div className="text-[18px] pl-12 py-2">
+              by{" "}
+              <a style={{ color: "white" }} href="https://about.beam.eco/" target="_blank" rel="noreferrer">
+                Beam
+              </a>
+            </div>
+          </div>
+          <Image src="/goldenknight.png" alt="Title Image" width={480} height={480} className="mx-4 pb-4" />
+          <div>
             <div>
               <div className="pb-4">{desc_content1}</div>
               <div className="pb-4">{desc_content2}</div>
@@ -92,7 +100,7 @@ const Home: NextPage = () => {
             <a style={{ color: "white" }} href={tgLink}>
               {tgLink}
             </a>
-          </p>
+          </div>
           <p>
             Chosen developers can submit their contributions, automatically claim grant streams, and showcase their work
             onchain.
