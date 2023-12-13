@@ -56,8 +56,6 @@ const Home: NextPage = () => {
 
   const desc = "A quiet place for special BuidlGuidl builders to create and collaborate.";
 
-  const tgLink = "https://t.me/+q2vcHUn5l_FjZGRh";
-
   const titleImage = "sanctum2.png";
 
   return (
@@ -75,12 +73,7 @@ const Home: NextPage = () => {
         <div className="max-w-[42rem] m-auto w-[90%] bg-secondary px-8 py-4 rounded-2xl">
           <p className="font-bold text-left text-4xl leading-6 py-2">{title}</p>
           <Image src={"/" + titleImage} alt="Title Image" width={500} height={500} className="mx-4" />
-          <p>
-            {desc + " "}{" "}
-            <a style={{ color: "white" }} href={tgLink}>
-              {tgLink}
-            </a>
-          </p>
+          <p>{desc + " "} </p>
           <p>
             Chosen developers can submit their contributions, automatically claim grant streams, and showcase their work
             onchain.
