@@ -56,9 +56,9 @@ const Home: NextPage = () => {
           const buildesWithValidCap = [];
           for (const builder of fetchedBuilderList) {
             const data = (await yourContractInstance?.streamedBuilders(builder)) as BuilderData;
-            // filter out builders with 0 cap
-            if (data.cap.toString() === "0") return;
-            buildesWithValidCap.push(builder);
+            if (data.cap.toString() !== "0") {
+              buildesWithValidCap.push(builder);
+            }
           }
 
           const uniqueBuilderList = [...new Set(buildesWithValidCap)];
