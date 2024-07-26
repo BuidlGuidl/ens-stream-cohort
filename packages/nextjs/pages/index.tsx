@@ -7,7 +7,8 @@ import { useAccount } from "wagmi";
 import { Contributions } from "~~/components/Contributions";
 import { HackerStreams } from "~~/components/HackerStreams";
 import { StreamContract } from "~~/components/StreamContract";
-import { useScaffoldContractRead, useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
+import { useScaffoldContract, useScaffoldContractRead, useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
+import { notification } from "~~/utils/scaffold-eth";
 
 type BuilderData = {
   cap: BigNumber;
@@ -20,10 +21,15 @@ const Home: NextPage = () => {
 
   const [builderList, setBuilderList] = useState<string[]>([]);
 
+  const [isLoadingBuilderList, setIsLoadingBuilderList] = useState(false);
   const { data: allBuildersData, isLoading: isLoadingBuilderData } = useScaffoldContractRead({
     contractName: "YourContract",
     functionName: "allBuildersData",
     args: [builderList],
+  });
+
+  const { data: yourContractInstance } = useScaffoldContract({
+    contractName: "YourContract",
   });
 
   const { data: withdrawEvents, isLoading: isLoadingWithdrawEvents } = useScaffoldEventHistory({
@@ -40,12 +46,32 @@ const Home: NextPage = () => {
   });
 
   useEffect(() => {
-    if (addBuilderEvents && addBuilderEvents.length > 0) {
-      const fetchedBuilderList = addBuilderEvents.map((event: any) => event.args.to);
-      // remove duplicates
-      const uniqueBuilderList = [...new Set(fetchedBuilderList)];
-      setBuilderList(uniqueBuilderList);
+    async function getBuilderList() {
+      try {
+        setIsLoadingBuilderList(true);
+
+        if (addBuilderEvents && addBuilderEvents.length > 0) {
+          const fetchedBuilderList = addBuilderEvents.map((event: any) => event.args.to);
+
+          const buildesWithValidCap = [];
+          for (const builder of fetchedBuilderList) {
+            const data = (await yourContractInstance?.streamedBuilders(builder)) as BuilderData;
+            // filter out builders with 0 cap
+            if (data.cap.toString() === "0") return;
+            buildesWithValidCap.push(builder);
+          }
+
+          const uniqueBuilderList = [...new Set(buildesWithValidCap)];
+          setBuilderList(uniqueBuilderList);
+        }
+      } catch (error) {
+        notification.error("Error fetching builder data");
+        console.log("Error fetching builder data", error);
+      } finally {
+        setIsLoadingBuilderList(false);
+      }
     }
+    getBuilderList();
   }, [addBuilderEvents]);
 
   const amIAStreamedBuilder = allBuildersData?.some(
@@ -104,7 +130,7 @@ const Home: NextPage = () => {
             <HackerStreams
               allBuildersData={allBuildersData}
               withdrawEvents={withdrawEvents}
-              isLoadingBuilderData={isLoadingBuilderData}
+              isLoadingBuilderData={isLoadingBuilderData || isLoadingBuilderList}
               isLoadingBuilderEvents={isLoadingBuilderEvents}
             />
           </div>
